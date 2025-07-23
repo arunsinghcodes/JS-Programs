@@ -16,3 +16,9 @@
 
 
 console.log("Hello World");
+
+const numberOne = 5;
+const numberTwo = 10;
+const sum = numberOne + numberTwo;
+
+console.log(sum);
