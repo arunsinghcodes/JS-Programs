@@ -42,11 +42,17 @@ async function fetchData() {
         editInput.style.display = "inline";
       });
 
-      saveBtn.addEventListener("click", function () {
-        editBtn.style.display = "inline";
-        saveBtn.style.display = "none";
-        paraText.style.display = "inline";
-        editInput.style.display = "none";
+      saveBtn.addEventListener("click", async function () {
+        let editValue = editInput.value;
+        let response = await updateData(element.id, editValue);
+        if (response.status === 200) {
+          editBtn.style.display = "inline";
+          saveBtn.style.display = "none";
+          paraText.style.display = "inline";
+          editInput.style.display = "none";
+
+          fetchData();
+        }
       });
 
       todoContainer.append(div);
@@ -85,6 +91,22 @@ async function deleteData(id) {
   if (response.status === 200) {
     fetchData();
   }
+}
+
+async function updateData(id, value) {
+  let objData = {
+    text: value.trim(),
+  };
+
+  let response = await fetch(`${API}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(objData),
+  });
+
+  return response;
 }
 
 fetchData();
