@@ -34,3 +34,20 @@
 // calculate(2,3, add);
 // calculate(2,3, substract);
 // calculate(4,5, multiply);
+
+// console.log("1. Fetching data....");
+
+// function fetchData(processData){
+//     setTimeout(() => {
+//         console.log("2. Data fetch ho chuka hai");
+//         processData();
+//     }, 3000);
+// }
+
+// function processData(){
+//     console.log("3. processing with data...");
+// }
+
+// fetchData(processData);
+
+// console.log("4. some other tasks...");
