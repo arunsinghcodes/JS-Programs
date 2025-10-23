@@ -6,3 +6,12 @@ h1 {
   background-color: rgb(99, 6, 6);
   color: aliceblue;
 }
+
+p {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border: 2px solid blue;
+  scale: 0.5;
+  transition: all linear 0.5s;
+}

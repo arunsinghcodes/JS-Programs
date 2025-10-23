@@ -18,9 +18,16 @@ Document object model
 // this the way of selecting the DOM
 let h1 = document.querySelector("h1");
 
-// h1.addEventListener("mousemove", () =>{
-//     console.log("Added the event listener on the h1 tag")
-// })
+h1.addEventListener("mouseenter", () => {
+  h1.style.backgroundColor = "red";
+  h1.style.cursor = "pointer";
+  console.log("Added the event listener on the h1 tag");
+});
+
+h1.addEventListener("mouseleave", () => {
+  h1.style.backgroundColor = "green";
+  console.log("Added the event listener on the h1 tag");
+});
 
 h1.style.backgroundColor = "green";
 
@@ -32,7 +39,7 @@ console.log("textContent", textContent);
 
 console.log(h1);
 
-let b = document.querySelector("p");
+let b = document.querySelector("h2");
 b.style.backgroundColor = "yellow";
 
 console.log(b);
@@ -40,9 +47,23 @@ console.log(b);
 // Event listener
 
 const btn = document.getElementById("callBtn");
-
 function btnCall() {
-  btn.addEventListener("click",(event) => {
+  btn.addEventListener("click", (event) => {
     console.log("Hello");
   });
 }
+
+let box = document.getElementById("box");
+
+let magicBtnExpand = document.getElementById("magicBtnExpand");
+let magicBtnShrink = document.getElementById("magicBtnShrink");
+
+magicBtnExpand.addEventListener("click", () => {
+  box.style.backgroundColor = "blue";
+  box.style.scale = "1.0";
+});
+
+magicBtnShrink.addEventListener("click", () => {
+  box.style.backgroundColor = "blue";
+  box.style.scale = "0.5";
+});
