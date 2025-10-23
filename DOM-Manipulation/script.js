@@ -5,8 +5,8 @@ console.log("Hello, World");
 
 1. DOM ✅
 2. Selection of HTML element ✅
-3. How to change or manipulate HTML 
-4. CSS -> how we can change the css with JavaScript
+3. How to change or manipulate HTML ✅
+4. CSS -> how we can change the css with JavaScript 
 5. Event lister (How to lissten the event)
 
 What is DOM?
@@ -18,14 +18,31 @@ Document object model
 // this the way of selecting the DOM
 let h1 = document.querySelector("h1");
 
+// h1.addEventListener("mousemove", () =>{
+//     console.log("Added the event listener on the h1 tag")
+// })
+
+h1.style.backgroundColor = "green";
+
 // Here we are change the content
-let innerHTML = h1.innerHTML = "I am doing DOM Manipulation";
-console.log("innerHTML",innerHTML)
-let textContent = h1.textContent = "Hello from the textContent";
-console.log("textContent",textContent)
+let innerHTML = (h1.innerHTML = "I am doing DOM Manipulation");
+console.log("innerHTML", innerHTML);
+let textContent = (h1.textContent = "Hello from the textContent");
+console.log("textContent", textContent);
 
 console.log(h1);
 
 let b = document.querySelector("p");
+b.style.backgroundColor = "yellow";
 
-console.log(b)
+console.log(b);
+
+// Event listener
+
+const btn = document.getElementById("callBtn");
+
+function btnCall() {
+  btn.addEventListener("click",(event) => {
+    console.log("Hello");
+  });
+}
