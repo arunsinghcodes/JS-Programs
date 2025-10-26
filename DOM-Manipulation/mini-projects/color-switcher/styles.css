@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.inputBtnContainer{
+    margin: 10px 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.heading{
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+button{
+    background-color: lightseagreen;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+button:active{
+    scale: 0.9;
+}
+
+#colorInput{
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.currentColor{
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18x;
+}
