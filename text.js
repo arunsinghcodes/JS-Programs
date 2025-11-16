@@ -18,7 +18,7 @@ var arr = ["A","B","C","D"];
  
  console.log(print(arr,3));
 
-
+// this is the example of array rotation function which will take the arr and input 
 function getOutput(arr, input) {
   let result = [];
   for (let i = 1; i <= 3; i++) {
