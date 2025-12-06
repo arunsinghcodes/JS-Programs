@@ -20,3 +20,20 @@ function flattenAaay(arr){
 
 console.log(flattenAaay(arr));
 
+// this is Revision code
+function flattenAarryNow(arr){
+    let result = [];
+
+    for(let item of arr){
+        if(Array.isArray(item)){
+            result = result.concat(flattenAarryNow(item));
+        }else{
+            result.push(item)
+        }
+    }
+
+    return result
+}
+
+
+console.log(flattenAarryNow(arr));

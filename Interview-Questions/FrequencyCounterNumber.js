@@ -24,3 +24,14 @@ for (let i = 0; i < arrOfNumber.length; i++) {
 }
 
 console.log(counts);
+
+for(let i = 0 ; i < arrOfNumber.length; i++){
+  const count = arrOfNumber[i];
+
+  if(counts[count] !== undefined){
+    counts[count] = counts[count] + 1;
+  }else{
+    counts[count] = 1;
+  }
+
+}
