@@ -10,15 +10,23 @@ const cart = [
   { name: "Orange", price: 140 },
 ];
 
-const promise = createOrder(cart); // This will return the orderId
+createOrder(cart)
+  .then(function (orderId) {
+    console.log(orderId);
+    return orderId;
+  })
+  .then((orderId) => {
+    return proceedToPayment(orderId);
+  })
+  .then((paymentInfo) => {
+    console.log(paymentInfo);
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
 
-promise.then(function (orderId) {
-    console.log(orderId)
-//   proceedToPayment(orderId);
-});
-
-function validateCart(){
-    return true;
+function validateCart() {
+  return true;
 }
 
 // producer part
@@ -38,9 +46,21 @@ function createOrder() {
     const orderId = "12345";
 
     if (orderId) {
-      resolve(orderId);
+      setTimeout(() => {
+        resolve(orderId);
+      }, 5000);
     }
   });
 
   return pr;
+}
+
+function proceedToPayment(orderId) {
+  return new Promise((resolve, reject) => {
+    if (orderId) {
+      resolve("Payment is successfully recived!");
+    } else {
+      reject(new Error("Unbale to procced payment!!"));
+    }
+  });
 }
