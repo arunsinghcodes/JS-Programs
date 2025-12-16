@@ -4,6 +4,8 @@
 // Error handling
 // Promises Chaining
 
+// Home work there are 4 aync methods createOrder , proccedToPayment , showOrderSummary, updateWallet
+
 const cart = [
   { name: "Apple", price: 120 },
   { name: "Banana", price: 60 },
@@ -47,7 +49,7 @@ function createOrder() {
 
     if (orderId) {
       setTimeout(() => {
-        resolve(orderId);
+        resolve(`Pls note your orderId for future reffernce ${orderId}`);
       }, 5000);
     }
   });
