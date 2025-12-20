@@ -16,17 +16,17 @@ Async-await vs Promises.then/.catch
 
 // Example of using async-await
 
-async function fetchData() {
-  try {
-    let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
+// async function fetchData() {
+//   try {
+//     let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// }
 
-fetchData();
+// fetchData();
 
 // this is example of retrurning value from async function, this value will be wrapped in promise
 async function example() {
