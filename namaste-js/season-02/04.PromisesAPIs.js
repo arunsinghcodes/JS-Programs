@@ -12,6 +12,7 @@ Promise.any
 
 */
 
+// =========================================== Start ==============================================
 
 // if all the promises are resloved.
 // if any one of the promise is rejected then the entire promise will be rejected
@@ -46,6 +47,11 @@ Promise.any
 //   console.log("Promise.all error:", error);
 // });
 
+
+// =========================================== End ===============================================
+
+// =========================================== Start ==============================================
+
 // if we wanted to know the status of all the promises whether they are resolved or rejected
 // it will give the status of all the promises
 // it will wait for all the promises to be settled either resolved or rejected
@@ -59,6 +65,9 @@ Promise.any
 //   console.log("Promise.allSettled results:", results);
 // });
 
+// =========================================== End ===============================================
+
+// =========================================== Start ==============================================
 
 // if we wanted the result of the first resolved promise
 // it will give the result of the first resolved promise
@@ -110,6 +119,10 @@ Promise.any
 //   console.log("Promise.race result:", result);
 // });
 
+// =========================================== End ===============================================
+
+// =========================================== Start ==============================================
+
 // if all the promises are rejected then the entire promise is rejected
 // it will give the error of the first rejected promise
 // it will not wait for the other promises to be resolved or rejected
@@ -117,13 +130,26 @@ Promise.any
 // it is used when we wanted to do the parallel api call and if all the api call is failed then we wanted to fail the all api call  \
 // it is used in scenarios like fetching data from multiple sources and using the first one that responds successfully
 
+
+
+// if all the promises got reject it will give aggregateErros
 // Promise.any([
 //   new Promise((_, reject) => setTimeout(() => reject("P1 rejected"), 2000)),
-//   new Promise((resolve) => setTimeout(() => resolve("P2 resolved"), 4000)),
-//   new Promise((resolve) => setTimeout(() => resolve("P3 resolved"), 6000)),
+//   new Promise((_, reject) => setTimeout(() => reject("P2 resolved"), 4000)),
+//   new Promise((_, reject) => setTimeout(() => reject("P3 resolved"), 6000)),
 // ]).then((result) => {
 //   console.log("Promise.any result:", result);
 // });
+
+// it will wait for first setelled success value
+// Promise.any([
+//   new Promise((_, reject) => setTimeout(() => reject("P1 rejected"), 2000)),
+//   new Promise((resolve, reject) => setTimeout(() => resolve("P2 resolved"), 4000)),
+//   new Promise((_, reject) => setTimeout(() => reject("P3 rejected"), 6000)),
+// ]).then((result) => {
+//   console.log("Promise.any result:", result);
+// });
+
 // setTimeout(() => {
 //   resolve(`Payment processed for orderId: ${orderId}`);
 // }, 3000);
