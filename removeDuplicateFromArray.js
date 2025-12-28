@@ -1,7 +1,7 @@
 const arr  = [1,2,2,3,4,4,5,5,5,6];
 
-const seen = {};
-const output = [];
+const seen = {}; // Dictonary mantaing 
+const output = []; // showing the output
 
 
 for(let i=0; i<arr.length; i++) {

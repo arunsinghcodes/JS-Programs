@@ -64,4 +64,5 @@ const sampleArray = [
 ];
 
 console.log(flatten(sampleArray, 2));
+console.log(JSON.stringify(flatten(arr, 2)));
 

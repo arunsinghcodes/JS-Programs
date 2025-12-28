@@ -28,7 +28,14 @@ function getOutput(arr, input) {
 }
 
 // Example
-const arr = ["A", "B", "C", "D"];
+// const arr = ["A", "B", "C", "D"];
+
+// we are rotating the array here what is happing now 
+// we are taking two args 1st itself arr and 2nd index as a input
+
+// creating a function taking the parameter and then created a variable to store the values
+//  arr[(input + i) % arr.length]
+// arr[(1 + 0) % 4]; => arr[3]
 
 console.log(getOutput(arr, 1)); // ["B", "C", "D"]
 console.log(getOutput(arr, 3)); // ["D", "A", "B"]

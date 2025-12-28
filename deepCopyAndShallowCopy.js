@@ -231,6 +231,8 @@ Example 1: Cloing an array of objects
 
 */
 
+// array of object [{}]
+
 let arr = [
     {x: 1},
     {y: 2}
