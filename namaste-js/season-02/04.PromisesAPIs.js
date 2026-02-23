@@ -29,7 +29,11 @@ Promise.any
 //   console.log("Promise.all results:", results);
 // });
 
-// if any one of the promises is rejected then the all the promise is rejected 
+Promise.all([
+  new Promise((resolve, reject) => setTimeout(() => resolve("P1"), 3000)),
+]).then((result) => console.log("Promise.all results", result));
+
+// if any one of the promises is rejected then the all the promise is rejected
 // it will give the error of the first rejected promise
 // it will not wait for the other promises to be resolved or rejected
 // it will immediately reject the all promise when any one of the promise is rejected
@@ -46,7 +50,6 @@ Promise.any
 // }).catch((error) => {
 //   console.log("Promise.all error:", error);
 // });
-
 
 // =========================================== End ===============================================
 
@@ -109,7 +112,7 @@ Promise.any
 // it is used when we wanted to get the fastest successful response from multiple api calls
 // it is used when we wanted to do the parallel api call and we wanted the first successful api call result
 // it is used in scenarios like fetching data from multiple mirrors and using the fastest one
-// it is also used in scenarios like loading resources from multiple CDNs and using the first one that responds 
+// it is also used in scenarios like loading resources from multiple CDNs and using the first one that responds
 
 // Promise.race([
 //   new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 2000)),
@@ -129,8 +132,6 @@ Promise.any
 // it is used when we wanted to fail fast mechanism for fulfilled promises
 // it is used when we wanted to do the parallel api call and if all the api call is failed then we wanted to fail the all api call  \
 // it is used in scenarios like fetching data from multiple sources and using the first one that responds successfully
-
-
 
 // if all the promises got reject it will give aggregateErros
 // Promise.any([

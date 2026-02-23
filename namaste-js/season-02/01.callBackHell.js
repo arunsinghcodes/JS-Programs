@@ -8,7 +8,7 @@ console.log("Season 2");
 
 // let suppose it wanted to perform the asyncronus operation like i wanted to print this JavaScript after the 5sec
 
-// this can be done with the help of callBacks
+// this can be done with the help of callBacks.
 
 setTimeout(function () {
   console.log("JavaScript");
