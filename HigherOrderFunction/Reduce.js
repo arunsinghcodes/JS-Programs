@@ -34,3 +34,23 @@ const maxValue = values.reduce((acc, curr)=>{
 // 10.      10   10  10
 // 50       10   50  50
 // 20       50   20  50
+
+const users = [
+  {firstName: "Arun", lastName: "Singh", age: 26},
+  {firstName: "Smii", lastName: "Singh", age: 25},
+  {firstName: "Narendra", lastName: "Modi", age: 75},
+  {firstName: "Amit", lastName: "Saha", age: 80},
+  {firstName: "Doland", lastName: "Trump", age: 80},
+]
+
+const output = users.reduce(function(acc, curr) {
+  if(acc[curr.age]){
+    acc[curr.age] = ++acc[curr.age]
+  }else{
+    acc[curr.age] = 1;
+  }
+  return acc;
+},{})
+
+
+console.log(output);
