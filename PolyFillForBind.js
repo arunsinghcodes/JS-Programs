@@ -16,11 +16,10 @@ boundGreet();
 // Write the polyfill for Bind which is own implimentation
 
 Function.prototype.myBind = function (context, ...args) {
-
-  const obj = this; // this is for create the context 
+  const fn = this;
 
   return function (...argsCall) {
-    return obj.apply(context, [...args, argsCall]);
+    return fn.apply(context, [...args, ...argsCall]);
   };
 };
 
