@@ -40,3 +40,13 @@ function getOutput(arr, input) {
 console.log(getOutput(arr, 1)); // ["B", "C", "D"]
 console.log(getOutput(arr, 3)); // ["D", "A", "B"]
 console.log(getOutput(arr, 0)); // ["A", "B", "C"]
+
+const getArrayRotation = (arr, input) =>{
+  let result = [];
+
+  for(let i = 1; i <= 3; i++){
+    result.push(arr[(input + i) % arr.length])
+  }
+
+  return result;
+}

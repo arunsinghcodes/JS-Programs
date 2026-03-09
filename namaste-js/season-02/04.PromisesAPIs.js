@@ -29,9 +29,9 @@ Promise.any
 //   console.log("Promise.all results:", results);
 // });
 
-Promise.all([
-  new Promise((resolve, reject) => setTimeout(() => resolve("P1"), 3000)),
-]).then((result) => console.log("Promise.all results", result));
+// Promise.all([
+//   new Promise((resolve, reject) => setTimeout(() => resolve("P1"), 3000)),
+// ]).then((result) => console.log("Promise.all results", result));
 
 // if any one of the promises is rejected then the all the promise is rejected
 // it will give the error of the first rejected promise
@@ -60,13 +60,13 @@ Promise.all([
 // it will wait for all the promises to be settled either resolved or rejected
 // it will give the array of objects with status and value or reason
 
-// Promise.allSettled([
-//   new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 2000)),
-//   new Promise((_, reject) => setTimeout(() => reject("P2 rejected"), 4000)),
-//   new Promise((resolve) => setTimeout(() => resolve("P3 resolved"), 6000)),
-// ]).then((results) => {
-//   console.log("Promise.allSettled results:", results);
-// });
+Promise.allSettled([
+  new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 2000)),
+  new Promise((_, reject) => setTimeout(() => reject("P2 rejected"), 4000)),
+  new Promise((resolve) => setTimeout(() => resolve("P3 resolved"), 6000)),
+]).then((results) => {
+  console.log("Promise.allSettled results:", results);
+});
 
 // =========================================== End ===============================================
 

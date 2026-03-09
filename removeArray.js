@@ -1,5 +1,5 @@
-const nums = [0,1,2,2,3,0,4,2];
-const val = 2;
+const nums = [0,1,2,2,3,0,4,2]; // this is array given
+const val = 2; // target value
 
 var removeElement = function (nums, val) {
   let k = 0;
