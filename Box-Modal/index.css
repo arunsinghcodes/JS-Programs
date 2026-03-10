@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: red;
+}
+
+.wrrapper{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+}
+
+.button-wrraper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.box{
+    width: 40%;
+    height: 40%;
+    background-color: white;
+}
