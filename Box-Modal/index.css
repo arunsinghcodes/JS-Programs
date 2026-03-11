@@ -9,24 +9,21 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: red;
+  background: red;
 }
 
-.wrrapper{
-    height: 50%;
-    width: 50%;
-    background-color: black;
+.wrapper {
+  width: 50%;
+  height: 50%;
+  background: black;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.button-wrraper{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-}
-
-.box{
-    width: 40%;
-    height: 40%;
-    background-color: white;
+.box {
+  width: 35%;
+  height: 40%;
+  background: white;
 }
