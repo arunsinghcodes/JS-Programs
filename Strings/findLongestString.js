@@ -5,6 +5,8 @@ output = "Programing"
 
 */
 
+// Pure without using builtIn Methods
+ 
 let str = "I Love JavaScript Programming Language";
 
 let words = str.split(" ");
@@ -20,4 +22,10 @@ for (let word of words) {
 
 console.log(longest);
 
+// BuiltIn methods
 
+let result = str.split(" ").reduce((longestWord, current) => {
+  return current.length > longestWord.length ? current : longestWord;
+});
+
+console.log(result);
