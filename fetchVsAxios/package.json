@@ -7,7 +7,7 @@
   "type": "module",
   "main": "one.js",
   "scripts": {
-    "start": "node one.js"
+    "start": "node two.js"
   },
   "dependencies": {
     "axios": "^1.13.6"
