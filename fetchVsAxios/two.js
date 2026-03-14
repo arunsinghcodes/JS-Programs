@@ -23,5 +23,5 @@ axios
     body: "This is new with Axois",
     userId: 23233,
   })
-  .then((data) => console.log(data.data))
+  .then((repsonse) => console.log(repsonse.data))
   .catch((error) => console.error("Error:", error.message));

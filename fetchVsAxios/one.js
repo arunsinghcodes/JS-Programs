@@ -12,5 +12,5 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
 // Axios Automatically parse JSON
 axios
   .get("https://jsonplaceholder.typicode.com/posts/1")
-  .then((response) => console.log(response))
+  .then((response) => console.log(response.data))
   .catch((error) => console.log("Error:", error));
