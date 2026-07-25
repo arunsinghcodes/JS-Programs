@@ -52,3 +52,11 @@ console.log(myArray);
 // 4. (Optional) Print it back as a single string
 console.log(myArray.join('')); 
 // Output: "olleh"
+
+
+// Time Complexity: ✅ O(n)
+// Even though the loop runs n/2 times, we ignore constants in Big O.
+// So O(n/2) becomes O(n).
+// Space Complexity: ✅ O(1)
+// Only three extra variables are used: left, right, and temp.
+// No extra array is created.
