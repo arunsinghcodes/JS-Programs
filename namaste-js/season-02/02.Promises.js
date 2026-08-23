@@ -1,19 +1,19 @@
-// const promise = new Promise((resolve, reject) => {
-//   const isAuthenticated = false;
-//   if (isAuthenticated) {
-//     resolve("Logged in sucessfully!");
-//   } else {
-//     reject("You are not authenticated");
-//   }
-// });
+const promise = new Promise((resolve, reject) => {
+  const isAuthenticated = false;
+  if (isAuthenticated) {
+    resolve("Logged in sucessfully!");
+  } else {
+    reject("You are not authenticated");
+  }
+});
 
-// promise
-//   .then((result) => {
-//     console.log(result);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+promise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // let's understand the promises
 
@@ -45,8 +45,8 @@ const users = fetch(GITHUB_URL);
 console.log(users); // Output: Promise {<pending>}
 
 
-result.then(response => {
-    // console.log(response.json()); // Output: Response object
+users.then(response => {
+    // console.log("Hii",response.json()); // Output: Response object
     return response.json(); // Return a promise that resolves to the JSON data
 }).then(data =>{
     console.log(data); // Output: Parsed JSON data from the response
@@ -56,6 +56,8 @@ result.then(response => {
  
 promise =>
     A promise is an object that represents the eventual completion or failure of an asynchronous operations and it's resulting value.
+
+Promsie data is immutable no one can chnage this.
 
 Prototype => Promise.prototype.then
 PromiseState => "Pending" | "fulfilled" | "Rejected"

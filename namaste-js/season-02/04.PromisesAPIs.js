@@ -22,8 +22,8 @@ Promise.any
 // it is used when we wanted to aggregate the results of multiple api calls
 
 // Promise.all([
-//   new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 2000)),
-//   new Promise((resolve, reject) => setTimeout(() => resolve("P2 resolved"), 4000)),
+//   new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 1000)),
+//   new Promise((resolve, reject) => setTimeout(() => reject("P2 resolved"), 2000)),
 //   new Promise((resolve) => setTimeout(() => resolve("P3 resolved"), 6000)),
 // ]).then((results) => {
 //   console.log("Promise.all results:", results);
@@ -98,13 +98,13 @@ Promise.allSettled([
 // it will help in improving user satisfaction by providing quicker access to content and minimizing wait times
 // it will help in achieving better business outcomes by enhancing user experience and optimizing resource utilization
 
-// Promise.race([
-//   new Promise((resolve) => setTimeout(() => resolve("P1 resolved"), 2000)),
-//   new Promise((resolve) => setTimeout(() => resolve("P2 resolved"), 4000)),
-//   new Promise((resolve) => setTimeout(() => resolve("P3 resolved"), 6000)),
-// ]).then((result) => {
-//   console.log("Promise.race result:", result);
-// });
+Promise.race([
+  new Promise((resolve, reject) => setTimeout(() => reject("P1 reject"), 1000)),
+  new Promise((resolve, reject) => setTimeout(() => reject("P2 reject"), 1000)),
+  new Promise((resolve, reject) => setTimeout(() => reject("P3 reject"), 6000)),
+]).then((result) => {
+  console.log("Promise.race result:", result);
+});
 
 // if we wanted the result of the first fulfilled promise
 // it will give the result of the first fulfilled promise
